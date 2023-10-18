@@ -1,0 +1,26 @@
+.customer-progress {
+  text-align: center;
+  margin: 20px;
+}
+
+.CircularProgressbar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #4A90E2; /* Color of the progress bar */
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6; /* Color of the background trail */
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #4A90E2; /* Color of the percentage text */
+  font-size: 20px;
+  font-weight: bold;
+}

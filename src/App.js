@@ -1,74 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react'
+import Sidebar from './Sidebar'
+import { Route, Routes } from 'react-router-dom'
+import Dashboard from './Dashboard'
+import Customers from './Customers'
+import Products from './Products';
+import Income  from './Income'
+import Promotion from './Promotion'
+import Help from './Help'
 
-const initialUserDetailsList = [
-  {
-    uniqueNo: 1,
-    imageUrl: 'https://assets.ccbp.in/frontend/react-js/esther-howard-img.png',
-    name: 'Esther Howard',
-    role: 'Software Developer'
-  },
-  {
-    uniqueNo: 2,
-    imageUrl: 'https://assets.ccbp.in/frontend/react-js/floyd-miles-img.png',
-    name: 'Floyd Miles',
-    role: 'Software Developer'
-  },
-  {
-    uniqueNo: 3,
-    imageUrl: 'https://assets.ccbp.in/frontend/react-js/jacob-jones-img.png',
-    name: 'Jacob Jones',
-    role: 'Software Developer'
-  },
-  {
-    uniqueNo: 4,
-    imageUrl: 'https://assets.ccbp.in/frontend/react-js/devon-lane-img.png',
-    name: 'Devon Lane',
-    role: 'Software Developer'
-  }
-]
-
-function App() {
-  const [inpu, setInput] = useState("")
-  const [usedetailsList, setUserdetailsList]  =  useState(initialUserDetailsList);
-
-
-const searchInput = event => {
-  setInput(event.target.value)
-
-
-}
-
-const searchMain = usedetailsList.filter(each => each.name.includes(inpu))
-
-const onDelete = uniqueNo => {
-  const dele = usedetailsList.filter(each => each.uniqueNo !== uniqueNo
-    )
-  setUserdetailsList(dele)  
-}
-
-
+const App = () => {
   return (
     <>
-    <center>
-      <input type='search' onChange={searchInput} value={inpu}  />
-      <ul>
-        {searchMain.map((user) => (
-          <li>
-            <h1>{user.name}</h1>
-            <p>{user.role}</p>
-            <button onClick={() => onDelete(user.uniqueNo)}> <img
-          src="https://assets.ccbp.in/frontend/react-js/cross-img.png"
-          alt="cross"
-          className="delete-img"
-        /></button>
-          </li>
-     
-        ))}
-         </ul>
-        
-     
-      
-    </center>
+    <div>
+    <Sidebar />
+    <Routes>
+      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route  path='/products' element={<Products />}/>
+      <Route path='/customers' element={<Customers />} />
+      <Route path='/income' element={<Income />} />
+      <Route path='/promotion' element={<Promotion />} />
+      <Route path='/help' element={<Help />} />
+    </Routes>
+    </div>
     </>
   )
 }

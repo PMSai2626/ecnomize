@@ -5,21 +5,24 @@ import "./index.css"
 
 const OrdersCard = () => {
   return (
-    <div className="orders-card">
-      <div className="icon">
-        <FaClipboardList size={80} color="thinkpink" style={{ borderRadius: "50%"}} />
-      </div>
-      <div >
-        <p><b>Orders</b></p>
-        <h2 >$2.4k</h2>
-        <div className="percentage">
-          
-          <FaArrowDown size={12} color="red" />
-          <span style={{color: "red"}}>2.5%</span>
-        </div>
-        <p>This Month</p>
-      </div>
+    <div className="order-card">
+    <div className="icon">
+      <FaClipboardList size={50} color="purple" />
     </div>
+    <div >
+      <div style={{display:"flex"}}>
+      <p><b>Subscribers</b></p>
+      <span style={{color: "green"}}>+25.5%</span>
+      </div>
+      
+      <div className="percentage">
+       
+        <h2>$198k</h2>
+        <FaArrowDown size={12} color="green" />
+      </div>
+      <p>433 orders</p>
+    </div>
+  </div>
   );
 };
 

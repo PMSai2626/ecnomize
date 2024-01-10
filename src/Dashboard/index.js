@@ -1,14 +1,14 @@
 import React from 'react'
 
 import "./index.css"
-import {BsSearch} from 'react-icons/bs'
 import {FaHandSparkles} from "react-icons/fa";
 import BalanceCard from './BalanceCard';
 import OrdersCard from './OrdersCard';
 import EarningCard from './EarningCard';
 import TotalSalesCard from './TotalSalesCard';
-import VerticalProgressGraph from './VerticalProgressGraph';
+import VerticalProgressGraph from './ProgressGraph';
 import  RoundProgress  from './RoundProgress';
+import Tabs from './Tabs/Tabs';
 
 
 
@@ -21,12 +21,10 @@ const Dashboard = () => {
    
     <div className='dasborad-main'>
         <div style={{display:"flex", paddingTop: "20px"}}>
-       <h3>Hello Sai kumar  </h3><FaHandSparkles style={{color: "red", height: "30px", width: "30px", marginLeft: "10px"}} />
+       <h3>Good Morning Oguz  </h3><FaHandSparkles style={{color: "red", height: "30px", width: "30px", marginLeft: "10px"}} />
+      
        </div>
-       <div>
-        <BsSearch  />
-       <input  style={{height: "25px"}} type='search' placeholder='search' />
-       </div>
+     
     </div>
     <div style={{display: "flex", marginTop: "30px"}}>
     <EarningCard />
@@ -41,7 +39,7 @@ const Dashboard = () => {
         <RoundProgress />
         </div>
     </div>
-                
+    <Tabs />
     </>
     
     

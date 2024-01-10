@@ -7,19 +7,24 @@ import "./index.css"
 const BalanceCard = () => {
   return (
     <div className="balance-card">
-      <div className="icon">
-        <FaWallet size={80}  color="blue" />
-      </div>
-      <div >
-        <p><b>Balance</b></p>
-        <h2 className='content'>$2.4k</h2>
-        <div className="percentage">
-          <span>5.2%</span>
-          <FaArrowDown size={12} color="red" />
-        </div>
-        <p>This Month</p>
-      </div>
+    <div className="icon-1">
+      <FaWallet size={50} color="purple" />
     </div>
+    <div >
+      <div style={{display:"flex"}}>
+      <p><b>Conversations</b></p>
+      <span style={{color: "red"}}>-3.4%</span>
+      </div>
+      
+      <div className="percentage">
+       
+        <h2>$198k</h2>
+        <FaArrowDown size={12} color="green" />
+      </div>
+      <p>433 orders</p>
+    </div>
+  </div>
+
   );
 };
 

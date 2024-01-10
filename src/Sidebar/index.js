@@ -9,22 +9,32 @@ import {FcMoneyTransfer} from 'react-icons/fc'
 import {FaPercent} from 'react-icons/fa'
 import {IoMdHelpCircle} from 'react-icons/io'
 import {FcBusinessman} from "react-icons/fc"
+import {BsSearch} from 'react-icons/bs'
+import { BsSegmentedNav } from 'react-icons/bs';
+import { BsIntersect } from 'react-icons/bs';
+
 
 
 const Sidebar = () => {
   return (
     <>
     <div className="sidebar">
-        <h3 style={{textAlign: "center"}}><RiSettingsLine size={35} style={{paddingTop: "12px"}} />Dashboard</h3>
+        <h3 style={{textAlign: "center"}}><RiSettingsLine size={35} style={{paddingTop: "12px"}} />BlueReciept</h3>
+        <div>
+        <BsSearch  />
+       <input  style={{height: "25px"}} type='search' placeholder='search' />
+       </div>
+      <Link to="/">{<FaDashcube style={{color: "white", marginRight: "10px"}} />}Dashboard  </Link>
+      <Link to="/products">{<FaProductHunt style={{color: "white", marginRight: "10px"}} /> } Conversations </Link>
+      <Link to="/customers"> {<GiHumanPyramid style={{color: "white", marginRight: "10px"}} />}Automations </Link>
+      <Link to="/income">{<FcMoneyTransfer style={{color: "white", marginRight: "10px"}} />} Compaigns </Link>
+      <Link to="/promotion"> {<FaPercent style={{color: "white", marginRight: "10px"}}  />} Popup </Link>
+      <Link to="/help"> {<IoMdHelpCircle style={{color: "white", marginRight: "10px"}}  />} Live chat </Link>
+      <Link to="/help"> {<BsSegmentedNav style={{color: "white", marginRight: "10px"}}  />} segments </Link>
+      <Link to="/help"> {<BsIntersect style={{color: "white", marginRight: "10px"}}  />} Integrations </Link>
 
-      <Link to="/dashboard">{<FaDashcube style={{color: "white", marginRight: "10px"}} />}Dashboard {<FaArrowRight style={{marginLeft: "100px"}} />} </Link>
-      <Link to="/products">{<FaProductHunt style={{color: "white", marginRight: "10px"}} /> } Products {<FaArrowRight style={{marginLeft: "110px"}} />}</Link>
-      <Link to="/customers"> {<GiHumanPyramid style={{color: "white", marginRight: "10px"}} />}Customers {<FaArrowRight style={{marginLeft: "100px"}} />}</Link>
-      <Link to="/income">{<FcMoneyTransfer style={{color: "white", marginRight: "10px"}} />} Income {<FaArrowRight style={{marginLeft: "121px"}} />}</Link>
-      <Link to="/promotion"> {<FaPercent style={{color: "white", marginRight: "10px"}}  />} Promote {<FaArrowRight style={{marginLeft: "112px"}} />}</Link>
-      <Link to="/help"> {<IoMdHelpCircle style={{color: "white", marginRight: "10px"}}  />} Help {<FaArrowRight style={{marginLeft: "138px"}} />}</Link>
       <div style={{marginTop: "320px"}}>
-      <Link to="/profile"> {<FcBusinessman style={{color: "white", marginRight: "10px", lineBreak: "none"}}  />} Evano {<FaArrowRight style={{marginLeft: "138px"}} />}</Link>
+      <Link to="/profile"> {<FcBusinessman style={{color: "white", marginRight: "10px", lineBreak: "none"}}  />} Evano </Link>
       <p style={{paddingLeft: "20px", color: "white"}}>Project manager</p>
       </div>
     </div>

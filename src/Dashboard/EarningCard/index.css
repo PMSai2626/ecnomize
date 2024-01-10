@@ -1,16 +1,20 @@
 /* EarningCard.css */
 .earning-card {
     background: #fff;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     margin-left: 300px;
+    height: 100px;
+    width: 200px;
+    padding-bottom:20px;
+   
   }
   
   .icon {
-    margin-right: 20px;
+    margin-right: 10px;
   }
   
   .icon svg {
@@ -18,28 +22,28 @@
   }
   
   .content {
-    flex: 1;
+    flex: 0;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 0rem;
     margin: 0;
   }
   
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
   }
   
   .percentage {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 1px;
   }
   
   .percentage span {
     color: green;
-    margin-right: 5px;
+    margin-right: 1px;
   }
   
   .percentage svg {

@@ -7,16 +7,20 @@ const EarningCard = () => {
   return (
     <div className="earning-card">
       <div className="icon">
-        <FaDollarSign size={80} color="purple" />
+        <FaDollarSign size={50} color="purple" />
       </div>
       <div >
-        <p><b>Earning</b></p>
-        <h2>$198k</h2>
+        <div style={{display:"flex"}}>
+        <p><b>Total Revenue</b></p>
+        <span style={{color: "green"}}>+25.5%</span>
+        </div>
+        
         <div className="percentage">
-          <span>37.8%</span>
+         
+          <h2>$198k</h2>
           <FaArrowUp size={12} color="green" />
         </div>
-        <p>This Month</p>
+        <p>433 orders</p>
       </div>
     </div>
   );
